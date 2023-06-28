@@ -6,8 +6,8 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from '@remix-run/react';
-import styles from './styles/app.css';
-import favicon from '../public/favicon.svg';
+import styles from '~/styles/app.css';
+// import favicon from '~/public/favicon.svg';
 
 export const links = () => {
   return [
@@ -20,7 +20,7 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    {rel: 'icon', type: 'image/svg+xml', href: favicon},
+    // {rel: 'icon', type: 'image/svg+xml', href: favicon},
   ];
 };
 
