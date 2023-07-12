@@ -3,6 +3,7 @@ module.exports = {
   appDirectory: 'app',
   ignoredRouteFiles: ['**/.*'],
   watchPaths: ['./public'],
+  tailwind: true,
   server: './server.js',
   /**
    * The following settings are required to deploy Hydrogen apps to Oxygen:
