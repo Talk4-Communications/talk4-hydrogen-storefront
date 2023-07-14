@@ -9,13 +9,17 @@ type Props = {
 
 export default function FormCardWrapper ({children, title, subtitle}: Props){
     return(
-        <div>
-            <div>
+        <div className="w-2/3">
+
+            <div className="flex w-full justify-center items-center my-5">
                 <img src={Talk4Logo} alt={"Talk4Logo"}/>
             </div>
+
+            <div className="my-5">
+                <h1 className="text-2xl/[2.5rem] font-bold font-gt-pro text-black text-center py-1">{title}</h1>
+                <h3 className="text-base font-gt-pro text-grey text-center py-1">{subtitle}</h3>
+            </div>
             <div>
-                <h1>{title}</h1>
-                <h3>{subtitle}</h3>
                 {children}
             </div>
         </div>

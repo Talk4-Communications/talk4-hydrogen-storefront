@@ -26,6 +26,7 @@
   "devDependencies": {
     "@remix-run/dev": "1.17.1",
     "@shopify/prettier-config": "^1.1.2",
+    "clsx": "^1.2.1",
     "eslint": "^8.20.0",
     "eslint-plugin-hydrogen": "0.12.2",
     "postcss-import": "^15.1.0",

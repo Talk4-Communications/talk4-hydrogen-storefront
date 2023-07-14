@@ -41,17 +41,18 @@ export default function Login() {
 
     return(
 
-        <div>
-            <div className= "grid grid-cols-2 divide-x-0">
-                <div>
-                    <img src={signInPage} alt={"signInPicture"}/>
+        <div className="max-w-screen flex min-h-screen flex-row">
+            <div className="flex flex-row w-full max-h-screen">
+                <div className="flex basis-1/2">
+                    <img className=" w-full"
+                        src={signInPage} alt={"signInPicture"}/>
                 </div>
 
-                <div className="flex justify-center">
-                    <h1 className= "text-3xl font-bold underline font-gt-pro text-black">"Welcome to Talk4"</h1>
-                    <FormCardWrapper subtitle="Login to your account" title="Welcome back to Talk4">
+                <div className="flex justify-center items-center basis-1/2">
+                    {/*<h1 className= "text-3xl font-bold underline font-gt-pro text-black">"Welcome to Talk4"</h1>*/}
+                    <FormCardWrapper subtitle="Login to your dashboard to manage your account" title="Welcome back to Talk4">
                         <Form method="post" noValidate>
-                            <div>
+                            <div className="space-y-4">
                                 <FormInput
                                     id="email"
                                     label="Email Address"
@@ -72,7 +73,7 @@ export default function Login() {
                                     id="password"
                                     label="Password"
                                     placeholder="Enter Password"
-                                    type="password"
+                                    type="text"
                                     autoComplete="current-password"
                                     required
                                     minLength={8}
@@ -93,20 +94,21 @@ export default function Login() {
                                     }}
                                 />
                             </div>
-                            <div>
-                                <p className= "text-sm font-gt-pro text-grey">
+                            <div className="">
+                                <p className="p-2 font-gt-pro text-grey text-right">
                                     <Link
-                                        className="text-primary/50 inline-block align-baseline text-sm"
+                                        className="text-primary/50 inline-block align-baseline text-sm hover:text-pink"
                                         to="/account/recover"
                                     >
                                         Forgot password?
                                     </Link>
                                 </p>
                             </div>
-                            <div>
+                            <div className="my-4">
                                 <button
                                     type="submit"
-                                    className="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark"
+                                    className="w-full inline-flex items-center justify-center border rounded-md bg-pink py-4 px-6 font-medium
+                                    font-gt-pro text-white transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-pink hover:border-pink"
                                     disabled={
                                         !!(
                                             nativePasswordError ||
@@ -117,6 +119,15 @@ export default function Login() {
                                 >
                                     {navigation.state !== 'idle' ? 'Logging in...' : 'Login'}
                                 </button>
+                            </div>
+
+                            <div className="my-1">
+                                <p className="text-sm text-center font-gt-pro">
+                                    Don't have an account?&nbsp;
+                                    <Link className="inline text-pink font-medium hover:underline" to="/account/register">
+                                        Create Account
+                                    </Link>
+                                </p>
                             </div>
 
                         </Form>

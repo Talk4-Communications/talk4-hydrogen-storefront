@@ -2,16 +2,18 @@
 module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    colors:{
-      'blue': '#3977FC',
-      'pink': '#EF5DA8',
-      'black': '#303030',
-      'grey': '#606060'
-    },
     fontFamily: {
       'gt-pro': ["GT Walsheim Pro"]
     },
-    extend: {},
+    extend: {
+      colors:{
+        'blue': '#3977FC',
+        'pink': '#EF5DA8',
+        'black': '#303030',
+        'grey': '#606060',
+        'red': '#EC5039'
+      },
+    },
   },
   plugins: [],
 };
