@@ -26,6 +26,7 @@ export default {
       const [cache, session] = await Promise.all([
         caches.open('hydrogen'),
         HydrogenSession.init(request, [env.SESSION_SECRET]),
+        PreviewSession.init(request, [env.SESSION_SECRET]),
       ]);
 
       /**

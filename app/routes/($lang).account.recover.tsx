@@ -1,11 +1,12 @@
 import {useState} from "react";
 import signInPage from '../../public/Images/signInPage.png';
-import {Form, Link, useNavigation} from "@remix-run/react";
+import {Form, Link, useActionData, useNavigation} from "@remix-run/react";
 import FormCardWrapper from "../components/account/FormCardWrapper";
 import FormInput from "../components/account/FormInput";
 
 
 export default function Recover(){
+    const actionData = useActionData<ActionData>();
     const [nativeEmailError, setNativeEmailError] = useState(null);
     const navigation = useNavigation()
 

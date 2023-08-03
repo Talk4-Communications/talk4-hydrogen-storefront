@@ -10,13 +10,14 @@ type Props = {
     ref?: React.Ref<HTMLInputElement>;
 }   & InputHTMLAttributes<HTMLInputElement>;
 
-export default function FormInput({error,label,id,type,placeholder,...rest}:Props){
+export default function FormInput({name,error,label,id,type,placeholder,...rest}:Props){
     return(
         <div className="w-full my-2 space-y-1">
             <label className="text-sm text-grey font-medium font-gt-pro" htmlFor={id}>
                 {label}
             </label>
             <input
+                name={name}
                 id={id}
                 type={type}
                 placeholder={placeholder}
