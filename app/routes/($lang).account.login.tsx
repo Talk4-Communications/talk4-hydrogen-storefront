@@ -36,13 +36,8 @@ export const action: ActionFunction = async ({request,params,context}) => {
 
     const formData = await request.formData();
 
-    console.log(formData)
-
     const email = formData.get('email');
     const password = formData.get('password');
-
-    console.log(email);
-    console.log(password);
 
     if (
         !email ||
@@ -73,7 +68,7 @@ export const action: ActionFunction = async ({request,params,context}) => {
         //     });
         // }
 
-        return redirect(params.lang ? `/${params.lang}/account/dashboard` : '/account/dashboard', {
+        return redirect(params.lang ? `/${params.lang}/account` : '/account', {
             headers: {
                 'Set-Cookie': await session.commit(),
             },

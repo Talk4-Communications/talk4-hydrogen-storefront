@@ -12,8 +12,10 @@ module.exports = {
         'black': '#303030',
         'grey': '#606060',
         'red': '#EC5039',
-        'offwhite': '#F1F5FF'
-      },
+        'offwhite': '#F1F5FF',
+        'lightpink' : '#FEF1F8'
+
+},
     },
   },
   plugins: [],
